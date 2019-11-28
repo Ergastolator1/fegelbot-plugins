@@ -156,13 +156,7 @@ class Fun(Cog):
             await ctx.send((choice(self.ball)))
         else:
             await ctx.send("Questa non sembra una domanda.")
-
-    @commands.command(aliases=["badjoke"])
-    async def dadjoke(self,ctx):
-        """Gives a random Dadjoke"""
-        x = Dadjoke()
-        await ctx.send(x.joke)
-        
+	
     @commands.command()
     async def lmgtfy(self, ctx, *, search_terms: str):
         """Crea un link lmgtfy."""
@@ -239,7 +233,7 @@ class Fun(Cog):
         msg = f"Ehi, {user.mention}! " if user is not None else ""
         roasts = ["Ti vorrei dare un aspetto cattivo ma ne hai già uno.", "Se diventerai un uomo a due facce, almeno rendine una carina.", "L'unico modo per essere licenziato è prendere un culo di pollo e aspettare.", "Sembra che la tua faccia abbia preso fuoco e qualcuno ha provato a rimuoverlo con un martello.", "Gli scienziati dicono che l'universo è fatto di neutroni, protoni ed elettroni. Si erano dimenticati di menzionare maroni.", "Perché è accettabile per te essere un idiota, ma non per me segnalarlo?", "Solo perché ne hai uno non hai bisogno di recitare come uno.", "Un giorno andrai lontano... e spero tu rimanga lì.", "Tu non hai permesso di accedere a- anzi, io non ho permesso di accedere a te nel tuo server!", "No, quei pantaloni non ti faranno sembrare più grasso - come potrebbero?", "Se vuoi veramente sapere errori, dovresti chiedere ai tuoi genitori.", "Ehi, hai qualcosa nel tuo mento... no, la terza in basso.", "Tu sei la prova che l'evoluzione può andare al contrario.", "I cervelli non sono tutto. Nel tuo caso non sono niente.", "Sei così brutto che quando ti guardi allo specchio i tuoi riflessi sono persi.", "Veloce - controlla la tua faccia! Ho già trovato il tuo naso nei miei affari.", "È meglio lasciare a qualcuno pensare che tu sia stupido piuttosto che aprire bocca e dimostrarlo.", "Tu sei una persona così bella, intelligente, stupenda. Oh scusa, pensavo avessimo una competizione di bugie.", "Hai il diritto di rimanere in silenzio perché qualsiasi cosa tu dica potrà anche essere stupida."]
         if str(user.id) == str(ctx.bot.user.id):
-            return await ctx.send(f"Uh?!! Nice try! I am not going to roast myself. Instead I am going to roast you now.\n\n {ctx.author.mention} {choice(roasts)}")
+            return await ctx.send(f"Uh?!! Bel tentativo! Non andrò a insultare me stesso. Piuttosto insulterò te ora.\n\n {ctx.author.mention} {choice(roasts)}")
         await ctx.send(f"{msg} {choice(roasts)}")
 
     @commands.command(aliases=['sc'])
